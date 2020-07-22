@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./resource/style/reset.css">
+    <link rel="stylesheet" href="./resource/style/style.css">
+    <link rel="stylesheet" href="./resource/style/swiper.css">
+    <title>PORTFOLIO</title>
+</head>
+<body>
+    <div class="wrap main">
+        <div class="header">
+            <h1 class="logo">
+               <a href="index.html">GYO</a>
+            </h1>
+            <button class="btn-menu" type="button">
+                <div class="btn-img">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <!-- /.btn-img -->
+                PROJECT
+            </button>
+            <!-- /.btn-menu -->
+            <a href="about.html">
+                ABOUT
+            </a>
+            <a href="contact.html">CONTACT</a>
+        </div>
+        <!-- /.header -->
+        <ul class="project-list">
+            <li>
+                <a href="#">DOF</a>
+            </li>
+            <li>
+                <a href="#">SNOWPEAK</a>
+            </li>
+            <li>
+                <a href="#">COIN 25</a>
+            </li>
+            <li>
+                <a href="#">MKS APP</a>
+            </li>
+            <li>
+                <a href="#">POSIS</a>
+            </li>
+            <li>
+                <a href="#">CHATBOT PLATFORM</a>
+            </li>
+            <li>
+                <a href="#">ETC</a>
+            </li>
+        </ul>
+        <div class="item-slide swiper-container">
+            <ul class="swiper-wrapper">
+                <li class="item swiper-slide">
+                    <span class="pic">
+                        <img src="resource/image/Layer 154.png" alt="">
+                    </span>
+                    <div class="info">
+                        <strong class="tit">SNOWPEAK</strong>
+                        <p>UI/UX , Responsive web<br>2019.07 ~ 2019.10</p>
+                    </div>
+                    <!-- /.info -->
+                    <!-- /.item -->
+                </li>
+                <li class="item swiper-slide">
+                    <span class="pic">
+                        <img src="resource/image/Layer 154.png" alt="">
+                    </span>
+                    <div class="info">
+                        <strong class="tit">SNOWPEAK</strong>
+                        <p>UI/UX , Responsive web<br>2019.07 ~ 2019.10</p>
+                    </div>
+                    <!-- /.info -->
+                    <!-- /.item -->
+                </li>
+                <li class="item swiper-slide">
+                    <span class="pic">
+                        <img src="resource/image/Layer 154.png" alt="">
+                    </span>
+                    <div class="info">
+                        <strong class="tit">SNOWPEAK</strong>
+                        <p>UI/UX , Responsive web<br>2019.07 ~ 2019.10</p>
+                    </div>
+                    <!-- /.info -->
+                    <!-- /.item -->
+                </li>
+                <li class="item swiper-slide">
+                    <span class="pic">
+                        <img src="resource/image/Layer 154.png" alt="">
+                    </span>
+                    <div class="info">
+                        <strong class="tit">SNOWPEAK</strong>
+                        <p>UI/UX , Responsive web<br>2019.07 ~ 2019.10</p>
+                    </div>
+                    <!-- /.info -->
+                    <!-- /.item -->
+                </li>
+                <li class="item swiper-slide">
+                    <span class="pic">
+                        <img src="resource/image/Layer 154.png" alt="">
+                    </span>
+                    <div class="info">
+                        <strong class="tit">SNOWPEAK</strong>
+                        <p>UI/UX , Responsive web<br>2019.07 ~ 2019.10</p>
+                    </div>
+                    <!-- /.info -->
+                    <!-- /.item -->
+                </li>
+            </ul>
+            <div class="swiper-pagination"></div>
+        </div>
+        <!-- /.item-slide -->
+    </div>
+    <!-- /.wrap -->
+    <script src="./resource/js/jquery-3.3.1.min.js"></script>
+    <script src="./resource/js/swiper.js"></script>
+    <script src="./resource/js/util.js"></script>
+    <script>
+        $('.btn-menu').on('click',function(){
+            $('.project-list').toggleClass('active');
+            $(this).toggleClass('active');
+        })
+    </script>
+</body>
+</html>
