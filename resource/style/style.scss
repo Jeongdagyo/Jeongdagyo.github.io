@@ -247,11 +247,41 @@ html,body {
             }
         }
     }
-    .swiper-pagination-progressbar {
-        width: 150px;
-        height: 3px;
+    .pagination-wrap {
+        position: absolute;
         left: 60px;
         top: 50%;
-        transform: rotate(90deg);
+        padding:0 30px;
+        transform: rotate(270deg);
+        z-index: 100;
+        .total-count,.current-count {
+            position: absolute;
+            left:0;
+            top:50%;
+            transform: translateY(-50%);
+            color:$white;
+            font-size:20px;
+            line-height:22px;
+        }
+        .total-count {
+            left:auto;
+            right:0;
+        }
+        .current-tit {
+            color: #fff;
+            position: absolute;
+            top: 55px;
+            left: 50%;
+            transform: translateX(-50%) rotate(90deg);
+        }
+    }
+    .swiper-pagination-progressbar {
+        position: static;
+        width: 150px;
+        height: 3px;
+        background-color: rgba($color: $white, $alpha: 0.29);
+        .swiper-pagination-progressbar-fill {
+            background-color: $white;
+        }
     }
 }

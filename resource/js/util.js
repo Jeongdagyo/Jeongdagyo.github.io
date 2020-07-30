@@ -12,14 +12,11 @@ var scrollControl = function (){
         srcoll : function(){
             var timer;
             var _self = this;
-            $scollSection.on('scroll touchmove mousewheel', function(e){
-                _self.scrollEvent(e);
-                e.preventDefault();
-                e.stopPropagation();
-                return false;
-            }
-        )},
+        },
         slide:function(){
+            var total = $('.pagination-wrap .total-count').text('0'+$('.swiper-slide').length),
+                current = $('.pagination-wrap .current-count'),
+                _self = this;
             var swiper = new Swiper('.swiper-container', {
                 slidesPerView: 'auto',
                 spaceBetween: 80,
@@ -28,34 +25,20 @@ var scrollControl = function (){
                 pagination: {
                     el: '.swiper-pagination',
                     type: 'progressbar',
-                  },
+                },
+                on:{
+                    slideChangeTransitionEnd : function(index){
+                        currentTit = $('.pagination-wrap .current-tit').text($('.swiper-slide-active .tit').text());
+                        current.text('0'+(index.activeIndex + 1));
+                    }
+                }
               });
-        },
-        scrollEvent : function(e){
-            var wheelEvent = e.originalEvent.wheelDelta;
-                wheelEvent === 120 ? $currentCount-- : $currentCount++;
-                $text.eq($currentCount).addClass('active').siblings().removeClass('active');
-                if($currentCount == $titleLength) $scollSection.off('scroll touchmove mousewheel');
+              var currentTit = $('.pagination-wrap .current-tit').text($('.swiper-slide-active .tit').text());
         },
     }
 }
 var scroll = scrollControl();
 scroll.init();
-
-
-// $('.wrap').on('scroll touchmove mousewheel', function(e) {
-//     var E = e.originalEvent;
-//     if (E.detail) {
-//         delta = E.detail
-//         console.log(delta)
-//     }else{
-//         delta = E.wheelDelta;
-//         console.log(delta)
-//     };
-//     e.preventDefault();
-//     e.stopPropagation();
-//     return false;
-//  })
 
 
 
